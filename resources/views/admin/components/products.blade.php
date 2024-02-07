@@ -63,8 +63,12 @@
                         @method('PUT')
                         <div class="row">
                             <div class="mt-3 col-12 col-md-6">
-                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება</label>
-                                <input type="text" name='name' value="{{$product->name}}" required class=" form-control">
+                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება (ქართულად)</label>
+                                <input type="text" name='name_ge' value="{{$product->name_ge}}" required class=" form-control">
+                            </div>
+                            <div class="mt-3 col-12 col-md-6">
+                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება (ინგლისურად)</label>
+                                <input type="text" name='name_en' value="{{$product->name_en}}" required class=" form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის კატეგორია</label>
@@ -102,8 +106,12 @@
                                 <input type="file" value="{{$product->image}}" name='image'  class="mt-2 form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-12">
-                                <label for="exampleInputEmail1" class="mt-3 mb-2">აღწერა</label>
-                                <textarea name="description"  cols="30" rows="10">{{$product->description}}</textarea>
+                                <label for="exampleInputEmail1" class="mt-3 mb-2">პროდუქტის აღწერა (ქართულად)</label>
+                                <textarea name="description_ge"  cols="30" rows="10">{{$product->description_ge}}</textarea>
+                            </div>
+                            <div class="mt-3 col-12 col-md-12">
+                                <label for="exampleInputEmail1" class="mt-3 mb-2">პროდუქტის აღწერა (ინგლისურად)</label>
+                                <textarea name="description_en"  cols="30" rows="10">{{$product->description_en}}</textarea>
                             </div>
                             <div class="mt-5 form-group col-12 col-md-6">
                                 <button class="btn btn-primary" type='submit'>დამატება</button>
@@ -152,8 +160,12 @@
                         @csrf
                         <div class='row'>
                             <div class="mt-3 col-12 col-md-6">
-                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება</label>
-                                <input type="text" name='name' required class=" form-control">
+                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება (ქართულად)</label>
+                                <input type="text" name='name_ge'  required class=" form-control">
+                            </div>
+                            <div class="mt-3 col-12 col-md-6">
+                                <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის დასახელება (ინგლისურად)</label>
+                                <input type="text" name='name_en'  required class=" form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის კატეგორია</label>
@@ -191,8 +203,12 @@
                                 <input type="file" name='image' required class="mt-2 form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-12">
-                                <label for="exampleInputEmail1" class="mt-3 mb-2">აღწერა</label>
-                                <textarea name="description"  cols="30" rows="10"></textarea>
+                                <label for="exampleInputEmail1" class="mt-3 mb-2">პროდუქტის აღწერა (ქართულად)</label>
+                                <textarea name="description_ge"  cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="mt-3 col-12 col-md-12">
+                                <label for="exampleInputEmail1" class="mt-3 mb-2">პროდუქტის აღწერა (ინგლისურად)</label>
+                                <textarea name="description_en"  cols="30" rows="10"></textarea>
                             </div>
                             <div class="mt-5 form-group col-12 col-md-6">
                                 <button class="btn btn-primary" type='submit'>დამატება</button>

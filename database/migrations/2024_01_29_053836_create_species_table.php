@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('species', function (Blueprint $table) {
             $table->id();
             $table->integer('brand_id');
-            $table->string('name');
-            $table->string('image')->nullable();
+            $table->string('name_ge');
+            $table->string('name_en');
             $table->timestamps();
         });
     }

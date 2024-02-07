@@ -16,8 +16,10 @@ return new class extends Migration
             $table->integer('brand_id')->nullable();
             $table->integer('specie_id')->nullable();
             $table->integer('category_id')->nullable();
-            $table->string('name');
-            $table->string('description')->nullable();
+            $table->string('name_ge');
+            $table->string('name_en');
+            $table->string('description_ge')->nullable();
+            $table->string('description_en')->nullable();
             $table->string('image');
             $table->decimal('price', 10, 2);
             $table->timestamps();

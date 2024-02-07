@@ -25,7 +25,7 @@
                         @foreach ($categories as $category)
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{$category->name}}</td>
+                                <td>{{$category->name_ge}}</td>
                                 <td><button class="btn btn-info" data-toggle="modal" data-target="#edit_category_{{$category->id}}">რედაქტირება</button></td>
                                 <td><button class="btn btn-danger" data-toggle="modal" data-target="#delete_category_{{$category->id}}">წაშლა</button></td>
                             </tr>
@@ -52,8 +52,12 @@
                         @csrf
                         @method('PUT')
                         <div class="mt-3 form-group col-12 col-md-12">
-                            <label for="exampleInputEmail1">კატეგორიის დასახელება</label>
-                            <input type="text" name='name' value="{{$category->name}}" class="mt-2 form-control">
+                            <label for="exampleInputEmail1">კატეგორიის დასახელება (ქართულად)</label>
+                            <input type="text" name='name_ge' value="{{$category->name_ge}}" class="mt-2 form-control">
+                        </div>
+                        <div class="mt-3 form-group col-12 col-md-12">
+                            <label for="exampleInputEmail1">კატეგორიის დასახელება (ინგლისურად)</label>
+                            <input type="text" name='name_ge' value="{{$category->name_en}}" class="mt-2 form-control">
                         </div>
                         <div class="mt-5 form-group col-12 col-md-12">
                             <button class="btn btn-primary" type='submit'>რედაქტირება</button>
@@ -101,8 +105,12 @@
                         @csrf
                         <div class='row'>
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">კატეგორიის დასახელება</label>
-                                <input type="text" name='name' required class="mt-2 form-control">
+                                <label for="exampleInputEmail1">კატეგორიის დასახელება (ქართულად)</label>
+                                <input type="text" name='name_ge'  class="mt-2 form-control">
+                            </div>
+                            <div class="mt-3 form-group col-12 col-md-12">
+                                <label for="exampleInputEmail1">კატეგორიის დასახელება (ინგლისურად)</label>
+                                <input type="text" name='name_ge' class="mt-2 form-control">
                             </div>
                             <div class="mt-5 form-group col-12 col-md-12">
                                 <button class="btn btn-primary" type='submit'>დამატება</button>

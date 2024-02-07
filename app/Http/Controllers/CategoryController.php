@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-
+use File;
 class CategoryController extends Controller
 {
 
@@ -33,7 +33,15 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = new Category;
-        $category->name = $request->name;
+        $category->name_ge = $request->name_ge;
+        $category->name_en = $request->name_en;
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extention;
+            $file->move('assets/admin/image/', $filename);
+            $category->image = '/assets/admin/image/'.$filename;
+        }
         $category->save();
         return back();
     }
@@ -45,8 +53,19 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::find($id);
-        $category->name = $request->name;
-
+        $category->name_ge = $request->name_ge;
+        $category->name_en = $request->name_en;
+        if ($request->hasfile('image')) {
+            $destination = $category->image;
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $request->file('image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extention;
+            $file->move('assets/admin/image/', $filename);
+            $category->image = '/assets/admin/image/'.$filename;
+        }
         $category->update();
 
         return back();

@@ -18,7 +18,7 @@
                 <div class="col-md-3">
                     <div class="p-3 mt-5 card brands">
                         <a href="/admin/species/{{ $brand->id }}"> <img src="{{ $brand->image }}"></a>
-                        <h5 class="mt-3">{{ $brand->name }}</h5>
+                        <h5 class="mt-3">{{ $brand->name_ge }} - {{ $brand->name_en }}</h5>
                         <div class="row">
                             <div class="col-6"><button class="btn btn-info" data-toggle="modal"
                                     data-target="#edit_brand_{{ $brand->id }}">რედაქტირება</button></div>
@@ -38,7 +38,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">კატეგორიის რედაქტირება</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">მწარმოებლის რედაქტირება</h5>
                         <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -49,11 +49,15 @@
                             @csrf
                             @method('PUT')
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">კატეგორიის დასახელება</label>
-                                <input type="text" name='name' value="{{ $brand->name }}" class="mt-2 form-control">
+                                <label for="exampleInputEmail1">მწარმოებლის დასახელება (ქართულად)</label>
+                                <input type="text" name='name_ge' value="{{ $brand->name_ge }}" class="mt-2 form-control">
                             </div>
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">კატეგორიის სურათი</label>
+                                <label for="exampleInputEmail1">მწარმოებლის დასახელება (ინგლისურად)</label>
+                                <input type="text" name='name_ge' value="{{ $brand->name_en }}" class="mt-2 form-control">
+                            </div>
+                            <div class="mt-3 form-group col-12 col-md-12">
+                                <label for="exampleInputEmail1">მწარმოებლის სურათი</label>
                                 <input type="file" name='image' value="{{ $brand->image }}" class="mt-2 form-control">
                             </div>
                             <div class="mt-5 form-group col-12 col-md-12">
@@ -70,7 +74,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">კატეგორიის წაშლა</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">მწარმოებლის წაშლა</h5>
                         <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -92,7 +96,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">კატეგორიის დამატება</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">მწარმოებლის დამატება</h5>
                     <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -102,11 +106,15 @@
                         @csrf
                         <div class='row'>
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">კატეგორიის დასახელება</label>
-                                <input type="text" name='name' class="mt-2 form-control">
+                                <label for="exampleInputEmail1">მწარმოებლის დასახელება (ქართულად)</label>
+                                <input type="text" name='name_ge'  class="mt-2 form-control">
                             </div>
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">კატეგორიის სურათი</label>
+                                <label for="exampleInputEmail1">მწარმოებლის დასახელება (ინგლისურად)</label>
+                                <input type="text" name='name_ge' class="mt-2 form-control">
+                            </div>
+                            <div class="mt-3 form-group col-12 col-md-12">
+                                <label for="exampleInputEmail1">მწარმოებლის სურათი</label>
                                 <input type="file" name='image' class="mt-2 form-control">
                             </div>
                             <div class="mt-5 form-group col-12 col-md-12">

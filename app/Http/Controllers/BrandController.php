@@ -35,7 +35,8 @@ class BrandController extends Controller
     public function store(Request $request)
     {
         $brand = new Brand;
-        $brand->name = $request->name;
+        $brand->name_ge = $request->name_ge;
+        $brand->name_en = $request->name_en;
         if ($request->hasfile('image')) {
             $file = $request->file('image');
             $extention = $file->getClientOriginalExtension();
@@ -54,7 +55,8 @@ class BrandController extends Controller
     public function update(Request $request, $id)
     {
         $brand = Brand::find($id);
-        $brand->name = $request->name;
+        $brand->name_ge = $request->name_ge;
+        $brand->name_en = $request->name_en;
         if ($request->hasfile('image')) {
             $destination = $brand->image;
             if (File::exists($destination)) {

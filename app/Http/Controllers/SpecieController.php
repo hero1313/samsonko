@@ -38,7 +38,8 @@ class specieController extends Controller
     public function store(Request $request, $id)
     {
         $specie = new Specie;
-        $specie->name = $request->name;
+        $specie->name_ge = $request->name_ge;
+        $specie->name_en = $request->name_en;
         $specie->brand_id = $id;
         $specie->save();
         return back();
@@ -51,7 +52,8 @@ class specieController extends Controller
     public function update(Request $request, $id)
     {
         $specie = Specie::find($id);
-        $specie->name = $request->name;
+        $specie->name_ge = $request->name_ge;
+        $specie->name_en = $request->name_en;
         $specie->brand_id = $request->brand_id;
         $specie->update();
 

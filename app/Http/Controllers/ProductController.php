@@ -42,8 +42,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = new Product;
-        $product->name = $request->name;
-        $product->description = $request->description;
+        $product->name_ge = $request->name_ge;
+        $product->name_en = $request->name_en;
+        $product->description_ge = $request->description_ge;
+        $product->description_en = $request->description_en;
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
         $product->specie_id = $request->specie_id;
@@ -66,8 +68,14 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::find($id);
-        $product->name = $request->name;
-        if ($request->hasfile('image')) {
+        $product->name_ge = $request->name_ge;
+        $product->name_en = $request->name_en;
+        $product->description_ge = $request->description_ge;
+        $product->description_en = $request->description_en;
+        $product->category_id = $request->category_id;
+        $product->brand_id = $request->brand_id;
+        $product->specie_id = $request->specie_id;
+        $product->price = $request->price;        if ($request->hasfile('image')) {
             $destination = $product->image;
             if (File::exists($destination)) {
                 File::delete($destination);
