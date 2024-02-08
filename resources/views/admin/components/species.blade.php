@@ -57,14 +57,9 @@
                             @csrf
                             @method('PUT')
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">მოდელის დასახელება (ქართულად)</label>
-                                <input type="text" name='name_ge' value="{{ $specie->name_ge }}" class="mt-2 form-control">
-                            </div>
-                            <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">მოდელის დასახელება (ინგლისურად)</label>
-                                <input type="text" name='name_en' value="{{ $specie->name_en }}" class="mt-2 form-control">
-                            </div>
-                            
+                                <label for="exampleInputEmail1">მოდელის დასახელება</label>
+                                <input type="text" name='name' value="{{ $specie->name }}" class="mt-2 form-control">
+                            </div>                  
                             
                             <label for="exampleInputEmail1" class="mt-3 mb-2">ავტომობილის მწარმოებელი</label>
                             <select name="brand_id" class="form-select" aria-label="Default select example">
@@ -119,12 +114,8 @@
                         @csrf
                         <div class='row'>
                             <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">მოდელის დასახელება (ქართულად)</label>
-                                <input type="text" name='name_ge' class="mt-2 form-control">
-                            </div>
-                            <div class="mt-3 form-group col-12 col-md-12">
-                                <label for="exampleInputEmail1">მოდელის დასახელება (ინგლისურად)</label>
-                                <input type="text" name='name_en' class="mt-2 form-control">
+                                <label for="exampleInputEmail1">მოდელის დასახელება</label>
+                                <input type="text" name='name' class="mt-2 form-control">
                             </div>
                             <div class="mt-5 form-group col-12 col-md-12">
                                 <button class="btn btn-primary" type='submit'>დამატება</button>

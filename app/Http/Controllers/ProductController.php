@@ -27,10 +27,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('category')->with('specie')->with('brand')->orderBy('created_at', 'desc')->get();
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::orderBy('name_ge')->get();
         $brands = Brand::orderBy('name')->get();
         $species = Specie::orderBy('name')->get();
-
 
         return view('admin.components.products', compact(['products','categories','brands','species']));
     }

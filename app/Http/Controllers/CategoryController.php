@@ -33,8 +33,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = new Category;
-        $category->name_ge = $request->name_ge;
-        $category->name_en = $request->name_en;
+        $category->name = $request->name;
         if ($request->hasfile('image')) {
             $file = $request->file('image');
             $extention = $file->getClientOriginalExtension();

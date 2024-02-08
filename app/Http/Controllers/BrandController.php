@@ -10,17 +10,7 @@ use File;
 class BrandController extends Controller
 {
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Brand $brand)
-    {
-        //
-    }
 
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $brands = Brand::orderBy('created_at', 'desc')->get();
@@ -35,8 +25,7 @@ class BrandController extends Controller
     public function store(Request $request)
     {
         $brand = new Brand;
-        $brand->name_ge = $request->name_ge;
-        $brand->name_en = $request->name_en;
+        $brand->name = $request->name;
         if ($request->hasfile('image')) {
             $file = $request->file('image');
             $extention = $file->getClientOriginalExtension();
@@ -55,8 +44,7 @@ class BrandController extends Controller
     public function update(Request $request, $id)
     {
         $brand = Brand::find($id);
-        $brand->name_ge = $request->name_ge;
-        $brand->name_en = $request->name_en;
+        $brand->name = $request->name;
         if ($request->hasfile('image')) {
             $destination = $brand->image;
             if (File::exists($destination)) {

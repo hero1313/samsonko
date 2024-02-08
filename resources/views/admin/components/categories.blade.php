@@ -57,7 +57,7 @@
                         </div>
                         <div class="mt-3 form-group col-12 col-md-12">
                             <label for="exampleInputEmail1">კატეგორიის დასახელება (ინგლისურად)</label>
-                            <input type="text" name='name_ge' value="{{$category->name_en}}" class="mt-2 form-control">
+                            <input type="text" name='name_en' value="{{$category->name_en}}" class="mt-2 form-control">
                         </div>
                         <div class="mt-5 form-group col-12 col-md-12">
                             <button class="btn btn-primary" type='submit'>რედაქტირება</button>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="mt-3 form-group col-12 col-md-12">
                                 <label for="exampleInputEmail1">კატეგორიის დასახელება (ინგლისურად)</label>
-                                <input type="text" name='name_ge' class="mt-2 form-control">
+                                <input type="text" name='name_en' class="mt-2 form-control">
                             </div>
                             <div class="mt-5 form-group col-12 col-md-12">
                                 <button class="btn btn-primary" type='submit'>დამატება</button>

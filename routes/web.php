@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\SpecieController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
@@ -22,6 +23,13 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return view('website.components.wishlist');
 });
+
+    Route::get('/', [MainController::class, 'landing'])->name('main.landing');
+    Route::get('/about', [MainController::class, 'about'])->name('main.about');
+    Route::get('/shop', [MainController::class, 'shop'])->name('main.shop');
+    Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+    Route::get('/wishlist', [MainController::class, 'wishlist'])->name('main.wishlist');
+    Route::get('/product/{id}', [MainController::class, 'product'])->name('main.product');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     // category

@@ -12,7 +12,7 @@
             </div>
         </form>
         <div class="mt-5 card">
-            <h5 class="card-header">კატეგორიები</h5>
+            <h5 class="card-header">პროდუქტები</h5>
             <div class="table-responsive text-nowrap">
                 <table class="table table-striped project-table">
                     <thead>
@@ -29,8 +29,8 @@
                         @foreach ($products as $product)
                             <tr>
                                 <th scope="row">1</th>
-                                <td>{{$product->name}}</td>
-                                <td>{{$product->category->name }}</td>
+                                <td>{{$product->name_ge}}</td>
+                                <td>{{$product->category->name_ge ?? '' }}</td>
                                 <td>{{$product->brand->name}}</td>
                                 <td>{{$product->specie->name }}</td>
                                 <td><img src="{{$product->image}}" alt=""></td>

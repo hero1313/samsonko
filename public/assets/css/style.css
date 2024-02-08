@@ -473,3 +473,11 @@ table img{
 .product-tbody img{
     width: 70px;
 }
+.product_headline{
+    font-size: 20px;
+}
+.banner-thumb{
+    padding: 20px;
+    background: #fff;
+    border-radius: 30px;
+}
