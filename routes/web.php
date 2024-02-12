@@ -5,6 +5,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\SpecieController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -28,8 +29,12 @@ Route::get('/', function () {
     Route::get('/about', [MainController::class, 'about'])->name('main.about');
     Route::get('/shop', [MainController::class, 'shop'])->name('main.shop');
     Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
-    Route::get('/wishlist', [MainController::class, 'wishlist'])->name('main.wishlist');
     Route::get('/product/{id}', [MainController::class, 'product'])->name('main.product');
+    // wishlist
+    Route::post('/add-to-cache', [WishlistController::class, 'addToCache'])->name('wishlist.addToCache');
+    Route::delete('/delete-from-cache/{id}', [WishlistController::class, 'deleteFromCache'])->name('wishlist.deleteFromCache');
+    Route::get('/wishlist', [WishlistController::class, 'index'])->name('main.index');
+
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     // category

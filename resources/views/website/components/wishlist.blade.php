@@ -17,43 +17,20 @@
                                                     <th class="product_thumb">Image</th>
                                                     <th class="product_name">Product</th>
                                                     <th class="product-price">Price</th>
-                                                    <th class="product_quantity">Stock Status</th>
-                                                    <th class="product_total">Add To Cart</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                   <td class="product_remove"><a href="#">X</a></td>
-                                                    <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a></td>
-                                                    <td class="product_name"><a href="#">Handbag fringilla</a></td>
-                                                    <td class="product-price">£65.00</td>
-                                                    <td class="product_quantity">In Stock</td>
-                                                    <td class="product_total"><a href="#">Add To Cart</a></td>
-
-
-                                                </tr>
-
-                                                <tr>
-                                                   <td class="product_remove"><a href="#">X</a></td>
-                                                    <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product2.jpg" alt=""></a></td>
-                                                    <td class="product_name"><a href="#">Handbags justo</a></td>
-                                                    <td class="product-price">£90.00</td>
-                                                    <td class="product_quantity">In Stock</td>
-                                                    <td class="product_total"><a href="#">Add To Cart</a></td>
-
-
-                                                </tr>
-                                                <tr>
-                                                   <td class="product_remove"><a href="#">X</a></td>
-                                                    <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product3.jpg" alt=""></a></td>
-                                                    <td class="product_name"><a href="#">Handbag elit</a></td>
-                                                    <td class="product-price">£80.00</td>
-                                                    <td class="product_quantity">In Stock</td>
-                                                    <td class="product_total"><a href="#">Add To Cart</a></td>
-
-
-                                                </tr>
-
+                                                @foreach ($products as $product)
+                                                    <tr class="wishlist-tr">
+                                                        <td class="product_remove"> 
+                                                            <button class="btn btn-primary delete-wishlist"  data-product-id="{{$product->id}}">X</button>
+                                                        </td>
+                                                        <td class="product_thumb"><a href="#"><img src="{{$product->image}}" alt=""></a></td>
+                                                        <td class="product_name"><a href="#">{{$product->name_ge}}</a></td>
+                                                        <td class="product-price">{{$product->price}} ₾</td>
+                                                    </tr>
+                                                @endforeach
+                                                
                                             </tbody>
                                         </table>   
                                     </div>  
@@ -63,22 +40,33 @@
                          </div>
                     </form>
                 </div> 
-                <div class="row">
-                    <div class="col-12">
-                         <div class="wishlist_share">
-                            <h4>Share on:</h4>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>           
-                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>           
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>           
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>        
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>        
-                            </ul>      
-                        </div>
-                    </div> 
-                </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.delete-wishlist').click(function(){
+            var token = $('meta[name="csrf-token"]').attr('content');
+            var productId = $(this).data('product-id'); // Retrieve product ID from data-product-id attribute
+            var $row = $(this).closest('.wishlist-tr')
+            $.ajax({
+                type: 'DELETE', // Use DELETE method
+                url: '/delete-from-cache/' + productId,
+                data: {
+                        _token: token // Include the CSRF token
+                    },
+                success: function(response) {
+                    console.log('Product deleted from cache successfully');
+                    Swal.fire("პროდუქტი წარმატებით წაიშალა");
+                    $row.remove();
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire("მსგავსი პროდუქტი არ მოიძებნა");
+
+                }
+            });
+        });
+    });
+</script>
 @stop

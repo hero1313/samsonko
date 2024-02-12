@@ -11,7 +11,7 @@
                                 <div class="slider_content">
                                     <h1>Big sale off <span>Accessories Fidanza</span></h1>
                                     <p>Exclusive Offer -30% Off This Week</p>
-                                    <a class="button" href="shop.html">shopping now <i class="fa fa-angle-double-right"
+                                    <a class="button" href="/shop">shopping now <i class="fa fa-angle-double-right"
                                             aria-hidden="true"></i></a>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@
                                 <div class="slider_content center">
                                     <h1>Accessories <span>all kinds of tractor trailer</span></h1>
                                     <p>Exclusive Offer -30% Off This Week</p>
-                                    <a class="button" href="shop.html">shopping now <i class="fa fa-angle-double-right"
+                                    <a class="button" href="/shop">shopping now <i class="fa fa-angle-double-right"
                                             aria-hidden="true"></i></a>
                                 </div>
                             </div>
@@ -146,8 +146,157 @@
                 </div>
             </div>
             <!--Categories product area end-->
+            <div class="mb-5 blog_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                           <div class="section_title title_style2">
+                               <div class="title_content">
+                                   <h2><span>Services</span></h2>
+                                     
+                                </div>                 
+                            </div>
+                          </div>
+                    </div>   
+                    <div class="row">
+                        <div class="blog_container blog_column4 owl-carousel">
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/trasmision.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ტრანსმისიების შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/site.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ადგილზე მომსახურება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/generator.webp" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>სტარტერებისა და გენერატორების შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/4.webp" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ტურბინის შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/5.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>კარდანის წარმოება და რემონტი</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/6.jpeg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ძრავის ნაწილების შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/7.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ჰიდროცილინდრების რემონტი და წარმოება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/8.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>ძრავის კაპიტალური შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/9.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>კომპრესორების შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="col-lg-3">
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="blog-details.html"><img src="assets/website/img/10.jpg" alt=""></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4>აღმასრულებელი მექანიზმების შეკეთება</h4> 
+                                            <div class="post_meta">
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                    </div>       
+                            
+                </div>
+            </div>
             <!--product area start-->
-            <div class="product_area product_area_four color_three">
+            <div class="mt-5 product_area product_area_four color_three">
                 <div class="container">
                     <div class="row">
                         <div class="section_title s_title_style4">
@@ -180,7 +329,7 @@
                                                     <p>{{$product->description_ge}}</p>
                                                 </div>
                                                 <div class="countdown_text">
-                                                    <p><span>Hurry Up!</span> Offers ends in:</p>
+                                                    <button class="add-wishlist button" data="{{$product->id}}" type="button">favorites</button>
                                                 </div>
                                             
                                             </div>

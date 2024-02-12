@@ -17,6 +17,24 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="newsletter_container">
+                            <h3>Newsletter Now</h3>
+                            <p>Join 60.000+ subscribers and get a new discount coupon on every Wednesday.</p>
+                            <div class="subscribe_form">
+                                {{-- <form id="mc-form" class="mc-form footer-newsletter" >
+                                    <input id="mc-email" type="email" autocomplete="off" placeholder="Enter you email address here..." />
+                                    <button id="mc-submit">Subscribe</button>
+                                </form> --}}
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                                </div><!-- mailchimp-alerts end -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="newsletter_container">
                             <h3>Follow Us</h3>
                             <p>We make consolidating, marketing and tracking your social media website easy.</p>
                             <div class="footer_social">
@@ -29,24 +47,6 @@
                                    <li><a class="instagram2" href="#"><i class="icon-instagram2"></i></a></li>
                                </ul>
                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="newsletter_container">
-                            <h3>Newsletter Now</h3>
-                            <p>Join 60.000+ subscribers and get a new discount coupon on every Wednesday.</p>
-                            <div class="subscribe_form">
-                                <form id="mc-form" class="mc-form footer-newsletter" >
-                                    <input id="mc-email" type="email" autocomplete="off" placeholder="Enter you email address here..." />
-                                    <button id="mc-submit">Subscribe</button>
-                                </form>
-                                <!-- mailchimp-alerts Start -->
-                                <div class="mailchimp-alerts text-centre">
-                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                                </div><!-- mailchimp-alerts end -->
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-7">

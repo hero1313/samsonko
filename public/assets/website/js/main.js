@@ -684,10 +684,10 @@
     });
     
     /*---widget sub categories---*/
-    $(".widget_sub_categories > a").on("click", function() {
-        $(this).toggleClass('active');
-        $('.widget_dropdown_categories').slideToggle('medium');
-    }); 
+    // $(".widget_sub_categories > a").on("click", function() {
+    //     $(this).toggleClass('active');
+    //     $('.widget_dropdown_categories').slideToggle('medium');
+    // }); 
     
     
     /*---categories slideToggle---*/

@@ -26,8 +26,8 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                        <figure>
-                            <div class="about_thumb">
-                                <img src="assets/website/img/about/about1.jpg" alt="">
+                            <div class="about_thumb cetner">
+                                <img src="assets/website/img/logo.png" alt="">
                             </div>
                             <figcaption class="about_content">
                                 <h1>We are a digital agency focused on delivering content and utility user-experiences.</h1>

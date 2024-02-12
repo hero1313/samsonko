@@ -67,7 +67,7 @@
             <div class="header_top">
                <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-5">
+                        <div class="col-lg-6 col-md-6">
                             <div class="header_account">
                                 <ul>
                                     <li class="language"><a href="#"> english <i class="ion-chevron-down"></i></a>
@@ -76,6 +76,13 @@
                                             <li><a href="#">Geprgia</a></li>
                                         </ul>
                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header_account">
+                                <ul class="number-top">
+                                    + 995 599 68 36 82
                                 </ul>
                             </div>
                         </div>
@@ -90,23 +97,22 @@
                     <div class="row align-items-center">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-4">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/website/img/logo.png" alt=""></a>
+                                <a href="/"><img src="/assets/website/img/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-10 col-md-6 col-sm-6 col-6">
                             <div class="header_right_box">
                                 <div class="search_container">
-                                    <form action="#">
+                                    <form action="{{route('main.shop')}}">
                                         <div class="search_box">
-                                            <input placeholder="Search product..." type="text">
+                                            <input name="search" placeholder="Search product..." type="text">
                                             <button type="submit">Search</button> 
                                         </div>
                                     </form>
                                 </div>
                                 <div class="header_configure_area">
                                     <div class="header_wishlist">
-                                        <a href="wishlist.html"><i class="icon-heart"></i>
-                                            <span class="wishlist_count">3</span>
+                                        <a href="/wishlist"><i class="icon-heart"></i>
                                         </a>
                                     </div>
                                 </div>

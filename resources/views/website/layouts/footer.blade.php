@@ -1,113 +1,62 @@
 <!--footer area start-->
 <footer class="footer_widgets color_three">
-  <div class="footer_top">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-3">
-                  <div class="widgets_container">
-                      <h3>CONTACT INFO</h3>
-                      <div class="footer_contact">
-                         <div class="footer_contact_inner">
-                              <div class="contact_icone">
-                                  <img src="assets/img/icon/icon-phone2.png" alt="">
-                              </div>
-                              <div class="contact_text">
-                                  <p>Hotline Free 24/24: <br> <strong><a href="tel:0123456789">0123456789</a> </strong></p>
-                              </div>
-                          </div>
-                          <p>We are a team of designers and developers that create high quality HTML Template, Woocommerce, Shopify Theme.</p>
-                          <p>Your address goes here.. <br> demo@example.com</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-9">
-                 <div class="footer_col_container">
-                      <div class="widgets_container widget_menu">
-                          <h3>Information</h3>
-                          <div class="footer_menu">
-                              <ul>
-                                  <li><a href="about.html">About Us</a></li>
-                                  <li><a href="#">Delivery Information</a></li>
-                                  <li><a href="#">New products</a></li>
-                                  <li><a href="#">Best sales</a></li>
-                                  <li><a href="my-account.html">My Account</a></li>
-                                  <li><a href="#">Order History</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="widgets_container widget_menu">
-                          <h3>Customer Service</h3>
-                          <div class="footer_menu">
-                              <ul>
-                                  <li><a href="my-account.html">My Account</a></li>
-                                  <li><a href="cart.html">Shopping Cart</a></li>
-                                  <li><a href="wishlist.html">Wish List</a></li>
-                                  <li><a href="#">Prices drop</a></li>
-                                  <li><a href="#">Order History</a></li>
-                                  <li><a href="#">International Orders</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="widgets_container widget_menu">
-                          <h3>My Account</h3>
-                          <div class="footer_menu">
-                              <ul>
-                                  <li><a href="#">Sitemap</a></li>
-                                  <li><a href="my-account.html">My Account</a></li>
-                                  <li><a href="#">Delivery Information</a></li>
-                                  <li><a href="#">Order History</a></li>
-                                  <li><a href="wishlist.html">Wish List</a></li>
-                                  <li><a href="#">Specials</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="widgets_container widget_menu">
-                          <h3>Extras</h3>
-                          <div class="footer_menu">
-                              <ul>
-                                  <li><a href="#">Brands</a></li>
-                                  <li><a href="#">Gift Certificates</a></li>
-                                  <li><a href="#">Affiliate</a></li>
-                                  <li><a href="#">Specials</a></li>
-                                  <li><a href="wishlist.html">Wish List</a></li>
-                                  <li><a href="#">Newsletter</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="widgets_container widget_menu">
-                          <h3>Payment & Methods</h3>
-                          <div class="footer_menu">
-                              <ul>
-                                  <li><a href="#">Payment Methods</a></li>
-                                  <li><a href="my-account.html">My Account</a></li>
-                                  <li><a href="#">View All Amazing Deals</a></li>
-                                  <li><a href="#">Locations We Ship To</a></li>
-                                  <li><a href="#">FAQs</a></li>
-                                  <li><a href="#">Estimated Delivery Time</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="footer_bottom">
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-6 col-md-6">
-                  <div class="copyright_area">
-                      <p>&copy; 2022 <a href="#" class="text-uppercase">MAZLAY</a>. Made with <i class="fa fa-heart"></i> by <a target="_blank" href="https://www.hasthemes.com">HasThemes</a></p>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                 <div class="text-right footer_payment">
-                      <img src="assets/img/icon/payment.png" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>   
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widgets_container">
+                        <h3>CONTACT INFO</h3>
+                        <div class="footer_contact">
+                            <p>Email <br> contact@samsonko.com</p>
+                            <p>Number <br> + 995 599 68 36 82</p>
+
+                            <p>Address <br> Davit Aghmashenebeli Alley #6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer_col_container">
+                        <div class="widgets_container widget_menu">
+                            <h3>Information</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/shop">Shop</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                    <li><a href="/wishlist">favorites</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.005482898989!2d44.788574514474455!3d41.72040053260933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446de7f3e50d03%3A0xab06926b62054e74!2sHotel%20Aristocrat%20Tbilisi!5e0!3m2!1sen!2sge!4v1707722820775!5m2!1sen!2sge"
+                        width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="copyright_area">
+                        <p>© 2021 LDT SAMSONKO. ALL RIGHT RESERVED.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="text-right footer_payment">
+                        <div class="copyright_area">
+                            <a href="https://intelleye.ge/"><p>Created By Intelleye</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <!--footer area end-->
 
