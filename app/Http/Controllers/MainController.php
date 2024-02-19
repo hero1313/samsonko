@@ -31,7 +31,8 @@ class MainController extends Controller
         $categories = Category::all();
         if ($request->search) { // Corrected 'search' spelling
             $products = $products->where('name_ge', 'LIKE', "%{$request->search}%")
-                ->orWhere('name_en', 'LIKE', "%{$request->search}%"); // Corrected 'search' spelling
+                ->orWhere('name_en', 'LIKE', "%{$request->search}%")
+                ->orWhere('code', 'LIKE', "%{$request->search}%"); // Corrected 'search' spelling
         }
         if($request->category_id){
             $products = $products->where('category_id', $request->category_id);

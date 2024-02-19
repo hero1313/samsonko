@@ -18,6 +18,7 @@
                     <thead>
                         <th scope="col">#</th>
                         <th scope="col">პროდუქტის დასახელება</th>
+                        <th scope="col">კოდი</th>
                         <th scope="col">კატეგორია</th>
                         <th scope="col">ავტომობილის მწარმოებელი</th>
                         <th scope="col">ავტომობილის მოდელი</th>
@@ -30,6 +31,7 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>{{$product->name_ge}}</td>
+                                <td>{{$product->code}}</td>
                                 <td>{{$product->category->name_ge ?? '' }}</td>
                                 <td>{{$product->brand->name}}</td>
                                 <td>{{$product->specie->name }}</td>
@@ -49,7 +51,7 @@
 
     <div class="modal fade bd-example-modal-lg"  id="edit_product_{{$product->id}}" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">პროდუქტის რედაქტირება</h5>
@@ -73,16 +75,16 @@
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1" class="mb-2 ">პროდუქტის კატეგორია</label>
                                 <select name="category_id" class="form-select" >
-                                    <option value="{{ $product->category_id }}">{{ $product->category_id }}</option>
+                                    <option value="{{ $product->category_id }}">{{$product->category->name_ge ?? '' }}</option>
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}">{{ $category->name_ge }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1" class="mt-1 mb-2">ავტომობილის მწარმოებელი</label>
                                 <select name="brand_id" class="form-select" >
-                                    <option value="{{ $product->brand_id }}">{{ $product->brand_id }}</option>
+                                    <option value="{{ $product->brand_id }}">{{ $product->brand->name }}</option>
                                     @foreach ($brands as $brand)
                                         <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                                     @endforeach
@@ -91,7 +93,7 @@
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1" class="mt-1 mb-2">ავტომობილის მოდელი</label>
                                 <select name="specie_id" class="form-select" >
-                                    <option value="{{ $product->specie_id }}">{{ $product->specie_id }}</option>
+                                    <option value="{{ $product->specie_id }}">{{ $product->specie->name }}</option>
                                     @foreach ($species as $specie)
                                         <option value="{{ $specie->id }}">{{ $specie->name }}</option>
                                     @endforeach
@@ -100,6 +102,10 @@
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1">პროდუქტის ღირებულება</label>
                                 <input type="number" name='price' value="{{$product->price}}" required class="mt-2 form-control">
+                            </div>
+                            <div class="mt-3 col-12 col-md-6">
+                                <label for="exampleInputEmail1">პროდუქტის კოდი</label>
+                                <input type="text" value="{{$product->code}}" name='code'  class="mt-2 form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1">პროდუქტის ფოტოსურათი</label>
@@ -197,6 +203,10 @@
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1">პროდუქტის ღირებულება</label>
                                 <input type="number" name='price' required class="mt-2 form-control">
+                            </div>
+                            <div class="mt-3 col-12 col-md-6">
+                                <label for="exampleInputEmail1">პროდუქტის კოდი</label>
+                                <input type="text" name='code'  class="mt-2 form-control">
                             </div>
                             <div class="mt-3 col-12 col-md-6">
                                 <label for="exampleInputEmail1">პროდუქტის ფოტოსურათი</label>

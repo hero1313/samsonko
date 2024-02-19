@@ -38,7 +38,9 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+          font-family: 'FiraGO', sans-serif !important;
 }
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:200,300,400,500,600,700,800,900');
 
 /* transition */
 /* flex */
@@ -64,7 +66,7 @@ body {
   font-style: normal;
   font-weight: 400;
   visibility: visible;
-  font-family: "Rubik", sans-serif;
+  font-family: 'FiraGO', sans-serif;
   color: #222222;
 }
 
@@ -2179,7 +2181,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   content: "\f394";
   color: #fff;
   display: inline-block;
-  font-family: Ionicons;
+  font-family: 'FiraGO', sans-serif;
   position: absolute;
   font-size: 22px;
   line-height: 0px;
@@ -2607,7 +2609,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .categories_menu_toggle ul li.has-sub > a::before {
   position: absolute;
   content: "\f055";
-  font-family: FontAwesome;
+  font-family: 'FiraGO', sans-serif;
   top: 0;
   right: 20px;
   font-size: 18px;
@@ -5928,7 +5930,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .widget_list > ul > li.widget_sub_categories > a::before {
   content: "\f107";
   cursor: pointer;
-  font-family: FontAwesome;
+  font-family: 'FiraGO', sans-serif;
   font-size: 12px;
   position: absolute;
   right: 0;
@@ -5939,7 +5941,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .widget_list > ul > li.widget_sub_categories > a.active::before {
   content: "\f106";
   cursor: pointer;
-  font-family: FontAwesome;
+  font-family: 'FiraGO', sans-serif;
   font-size: 12px;
   position: absolute;
   right: 0;
@@ -7502,7 +7504,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #fcb700;
   content: "\f058";
   display: inline-block;
-  font-family: FontAwesome;
+  font-family: 'FiraGO', sans-serif;
   font-size: 1em;
   position: absolute;
   top: 0;
@@ -9245,7 +9247,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .panel-heading .panel-title a::before {
   position: absolute;
   content: "\f0d7";
-  font-family: "FontAwesome";
+  font-family: 'FiraGO', sans-serif;
   color: #333;
   font-size: 20px;
   width: 22px;

@@ -131,10 +131,10 @@
                                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 brands-lending">
                                     <div class="single_categories_product ">
                                         <div class="categories_product_thumb center">
-                                            <a href="shop.html"><img class="brand-img" src="{{$brand->image}}"alt=""></a>
+                                            <a href="/shop?brand_id={{$brand->id}}"><img class="brand-img" src="{{$brand->image}}"alt=""></a>
                                         </div>
                                         <div class="categories_product_content">
-                                            <h4><a href="shop.html"> {{$brand->name_ge}}</a></h4>
+                                            <h4><a href="/shop?brand_id={{$brand->id}}"> {{$brand->name_ge}}</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -329,7 +329,11 @@
                                                     <p>{{$product->description_ge}}</p>
                                                 </div>
                                                 <div class="countdown_text">
-                                                    <button class="add-wishlist button" data="{{$product->id}}" type="button">favorites</button>
+                                                    <button class="add-wishlist button" data="{{$product->id}}" type="button">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                                        </svg>
+                                                    </button>
                                                 </div>
                                             
                                             </div>

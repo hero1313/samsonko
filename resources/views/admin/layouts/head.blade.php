@@ -18,5 +18,22 @@
     <script src="../assets/vendor/js/helpers.js"></script>
     <script src="../assets/js/config.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qp2nd0gfgpmwoxas9xoypbqd0zp7sp1nqxlp6t7kuzb8t4nt/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     
   </head>
+  <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ],
+    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  });
+</script>

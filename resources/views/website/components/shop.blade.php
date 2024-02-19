@@ -45,28 +45,20 @@
                                 </div>
                                 <input type="hidden" id="specie" name="specie_id">
                                 <input type="hidden" id="brand" name="brand_id">
-                                <button class="btn btn-primary" type="submit">filter</button>
+                                <button class="btn btn-primary" type="submit">გაფილტვრა</button>
                             </form>
                         </aside>
                     </div>
                     <div class="col-lg-9 col-md-12">
-
-                        <!--shop toolbar start-->
                         <div class="shop_toolbar_wrapper">
                             <div class="shop_toolbar_btn">
                                 <button data-role="grid_4" type="button" class="active btn-grid-4" data-bs-toggle="tooltip"
                                     title="4"></button>
                                 <button data-role="grid_3" type="button" class=" btn-grid-3" data-bs-toggle="tooltip"
                                     title="3"></button>
-
-                                {{-- <button data-role="grid_list" type="button" class="btn-list" data-bs-toggle="tooltip"
-                                    title="List"></button> --}}
                             </div>
-                            
                         </div>
-                        <!--shop toolbar end-->
                         <div class="row shop_wrapper">
-
                             @foreach ($products as $product)
                                 <div class="col-lg-3 col-md-4 col-12 ">
                                     <article class="single_product">
@@ -80,9 +72,6 @@
                                                 <div class="label_product">
                                                     <span class="label_sale">sale</span>
                                                 </div>
-                                                {{-- <div class="quick_button">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"><i class="icon-eye"></i></a>
-                                        </div> --}}
                                             </div>
                                             <div class="product_content grid_content">
                                                 <div class="product_content_inner">
@@ -95,15 +84,20 @@
                                                     <h4 class="product_name"><a
                                                             href="{{ route('main.product', $product->id) }}">{{ $product->specie->name }}</a>
                                                     </h4>
+                                                    <h4 class="product_name"><a
+                                                        href="{{ route('main.product', $product->id) }}">{{ $product->code }}</a>
+                                                    </h4>
                                                     <div class="price_box">
                                                         <span class="current_price">${{ $product->price }}</span>
                                                     </div>
                                                 </div>
                                                 <div class="action_links">
                                                     <ul>
-                                                        <button class="add-wishlist button" data="{{$product->id}}" type="button">favorites</button>
-
-
+                                                        <button class="add-wishlist button" data="{{$product->id}}" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                                            </svg>
+                                                        </button>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -118,8 +112,11 @@
                                                         <p>
                                                             {{ $product->description_ge }}
                                                         </p>
-                                                        <button class="add-wishlist button" data="{{$product->id}}" type="button">favorites</button>
-
+                                                        <button class="add-wishlist button" data="{{$product->id}}" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                                            </svg>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -128,14 +125,10 @@
                                 </div>
                             @endforeach
                         </div>
-
-                        <!--shop toolbar end-->
-                        <!--shop wrapper end-->
                     </div>
                 </div>
             </div>
         </div>
-        <!--shop  area end-->
     </div>
     <script>
         $(document).ready(function() {
